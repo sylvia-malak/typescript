@@ -135,18 +135,18 @@ console.log(`Distance between 3D points: ${point3d1.distanceTo(point3d2)}`); // 
 
 /////////////////////////// 9. Container Implementation ///////////////////////////
 interface Container<T> {
-    put(item: T): void;
-    get(): T;
+    put(item: T): void; //بتاخد قيم ومش بترجع حاجه
+    get(): T; //بترجع قيم بس مش بتاخد حاجه
 }
 
 class SimpleBox<T> implements Container<T> {
     constructor(private content: T) {}
 
-    put(item: T): void {
+    put(item: T): void { 
         this.content = item;
     }
 
-    get(): T {
+    get(): T { 
         return this.content;
     }
 }
